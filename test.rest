@@ -1,0 +1,62 @@
+### Get all postings
+
+GET http://localhost:5028/postings
+### Get posting by id
+GET http://localhost:5028/postings/1
+### Get posting by non-existing id
+GET http://localhost:5028/postings/999
+
+### Get all postings (Отримання початкового списку)
+GET http://localhost:5028/postings
+
+### Get posting by id (Отримання наявної посилки)
+GET http://localhost:5028/postings/1
+
+### Get posting by non-existing id (Перевірка на 404)
+GET http://localhost:5028/postings/999
+
+### Create new posting (Створення нової посилки)
+POST http://localhost:5028/postings
+Content-Type: application/json
+
+{
+  "from": "Ivan",
+  "to": "Olena",
+  "content": "Documents",
+  "deliveryType": "Department",
+  "weight": 0.5,
+  "width": 20,
+  "height": 15,
+  "depth": 2,
+  "value": 100,
+  "price": 15
+}
+
+### Get all postings (Перевірка, чи з'явилася нова посилка у списку)
+GET http://localhost:5028/postings
+
+### Update posting by id (Редагування посилки №1)
+PUT http://localhost:5028/postings/1
+Content-Type: application/json
+
+{
+  "from": "Ivan",
+  "to": "Olena",
+  "content": "Documents (updated)",
+  "deliveryType": "Courier",
+  "weight": 0.6,
+  "width": 20,
+  "height": 15,
+  "depth": 2,
+  "value": 120,
+  "price": 20
+}
+
+### Get updated posting by id (Перевірка збереження змін)
+GET http://localhost:5028/postings/1
+
+### Delete posting by id (Видалення посилки №1)
+DELETE http://localhost:5028/postings/1
+
+### Get deleted posting by id (Перевірка, що посилка дійсно видалена -> 404)
+GET http://localhost:5028/postings/1
