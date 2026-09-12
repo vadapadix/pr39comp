@@ -1,9 +1,7 @@
 using System;
-using System.Text.Json.Serialization;
 
 namespace PostService.Models;
 
-[JsonConverter(typeof(JsonStringEnumConverter))]
 public enum DeliveryType
 {
     Department,

@@ -1,5 +1,4 @@
 using System.Linq;
-using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
@@ -8,11 +7,6 @@ using PostService.Mappings;
 using PostService.Services;
 
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.ConfigureHttpJsonOptions(options =>
-{
-    options.SerializerOptions.Converters.Add(new JsonStringEnumConverter());
-});
 
 builder.Services.AddScoped<IPostingService, PostingService>();
 
