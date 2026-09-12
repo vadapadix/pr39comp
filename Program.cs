@@ -1,66 +1,72 @@
-using PostService.Models;
+using System.Linq;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
+using PostService.Dtos;
+using PostService.Mappings;
+using PostService.Services;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<IPostingService, PostingService>();
+
 var app = builder.Build();
 
 app.MapGet("/", () => "Це API поштового клієнта");
 
-
-var postings = new List<Posting>
+app.MapGet("/postings", (IPostingService postingService) =>
 {
-    new Posting
+    var postings = postingService.GetAll();
+    var resultDtos = postings.Select(PostingMapper.ToPostingGetDto);
+    return Results.Ok(resultDtos);
+});
+
+app.MapGet("/postings/{id}", (int id, IPostingService postingService) =>
+{
+    var posting = postingService.Find(id);
+    if (posting is null)
     {
-        Id = 1,
-        From = "Alice",
-        To = "Bob",
-        Content = "Books",
-        DeliveryType = DeliveryType.Courier,
-        Weight = 2.5f,
-        Width = 30,
-        Height = 20,
-        Depth = 10,
-        Value = 50.0f,
-        Price = 10.0f,
-        CreatedAt = DateTime.UtcNow
+        return Results.NotFound();
     }
-};
 
-app.MapPost("/postings", (Posting posting) =>
-{
-    posting.Id = postings.Max(p => p.Id) + 1;
-    postings.Add(posting);
-    return Results.Created($"/postings/{posting.Id}", posting);
+    var resultDto = PostingMapper.ToPostingGetDto(posting);
+    return Results.Ok(resultDto);
 });
 
-app.MapGet("/postings", () => postings);
-
-app.MapGet("/postings/{id}", (int id) =>
+app.MapPost("/postings", (PostingPostDto postDto, IPostingService postingService) =>
 {
-    var posting = postings.FirstOrDefault(p => p.Id == id);
-    return posting is null ? Results.NotFound() : Results.Ok(posting);
+    var newPosting = PostingMapper.ToPosting(postDto);
+    var savedObject = postingService.Create(newPosting);
+    var resultDto = PostingMapper.ToPostingGetDto(savedObject);
+    return Results.Created($"/postings/{resultDto.Id}", resultDto);
 });
-app.MapPut("/postings/{id}", (int id, Posting updated) =>
+
+app.MapPut("/postings/{id}", (int id, PostingPutDto putDto, IPostingService postingService) =>
 {
-    var posting = postings.FirstOrDefault(p => p.Id == id);
-    if (posting is null)
+    if (id != putDto.Id)
+    {
+        return Results.BadRequest("Id в маршруті та в тілі запиту не збігаються");
+    }
+
+    var postingToUpdate = PostingMapper.ToPosting(putDto);
+    var updated = postingService.Update(postingToUpdate);
+    if (updated is null)
+    {
         return Results.NotFound();
-    posting.From = updated.From;
-    posting.To = updated.To;
-    posting.Content = updated.Content;
-    posting.DeliveryType = updated.DeliveryType;
-    posting.Weight = updated.Weight;
-    posting.Width = updated.Width;
-    posting.Height = updated.Height;
-    posting.Depth = updated.Depth;
-    posting.Value = updated.Value;
-    posting.Price = updated.Price;
-    return Results.Ok(posting);
+    }
+
+    var resultDto = PostingMapper.ToPostingGetDto(updated);
+    return Results.Ok(resultDto);
 });
-app.MapDelete("/postings/{id}", (int id) =>
+
+app.MapDelete("/postings/{id}", (int id, IPostingService postingService) =>
 {
-    var posting = postings.FirstOrDefault(p => p.Id == id);
-    if (posting is null)
+    var deletedCount = postingService.Delete(id);
+    if (deletedCount == 0)
+    {
         return Results.NotFound();
-    postings.Remove(posting);
+    }
+
     return Results.NoContent();
 });
 

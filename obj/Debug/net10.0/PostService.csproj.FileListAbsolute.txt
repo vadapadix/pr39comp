@@ -26,3 +26,32 @@ C:\Users\Admin.RIVNE\Desktop\владік\пр37комп\PostService\obj\Debug\n
 C:\Users\Admin.RIVNE\Desktop\владік\пр37комп\PostService\obj\Debug\net10.0\PostService.pdb
 C:\Users\Admin.RIVNE\Desktop\владік\пр37комп\PostService\obj\Debug\net10.0\PostService.genruntimeconfig.cache
 C:\Users\Admin.RIVNE\Desktop\владік\пр37комп\PostService\obj\Debug\net10.0\ref\PostService.dll
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\bin\Debug\net10.0\appsettings.Development.json
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\bin\Debug\net10.0\appsettings.json
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\bin\Debug\net10.0\PostService.staticwebassets.endpoints.json
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\bin\Debug\net10.0\PostService.exe
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\bin\Debug\net10.0\PostService.deps.json
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\bin\Debug\net10.0\PostService.runtimeconfig.json
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\bin\Debug\net10.0\PostService.dll
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\bin\Debug\net10.0\PostService.pdb
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\obj\Debug\net10.0\PostService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\obj\Debug\net10.0\PostService.AssemblyInfoInputs.cache
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\obj\Debug\net10.0\PostService.AssemblyInfo.cs
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\obj\Debug\net10.0\PostService.csproj.CoreCompileInputs.cache
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\obj\Debug\net10.0\PostService.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\obj\Debug\net10.0\PostService.sourcelink.json
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\obj\Debug\net10.0\rjimswa.dswa.cache.json
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\obj\Debug\net10.0\scopedcss\bundle\PostService.styles.css
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\obj\Debug\net10.0\staticwebassets.build.json.cache
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\obj\Debug\net10.0\staticwebassets.development.json
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\obj\Debug\net10.0\swae.build.ex.cache
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\obj\Debug\net10.0\PostService.dll
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\obj\Debug\net10.0\refint\PostService.dll
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\obj\Debug\net10.0\PostService.pdb
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\obj\Debug\net10.0\PostService.genruntimeconfig.cache
+C:\Users\velyc\Desktop\практичні 4 курс\компоненти\ПР39\PostService\obj\Debug\net10.0\ref\PostService.dll
