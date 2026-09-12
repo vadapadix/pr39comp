@@ -1,7 +1,3 @@
-using System.Linq;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.DependencyInjection;
 using PostService.Dtos;
 using PostService.Mappings;
 using PostService.Services;
